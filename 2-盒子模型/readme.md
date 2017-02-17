@@ -16,6 +16,14 @@ white-space:nowrap;
 }
 ```
 
+- text-indent
+```css
+/* Keyword values */
+text-indent: 5em each-line;
+text-indent: 5em hanging; 悬挂，除了首行，其他行缩进。不兼容
+text-indent: 5em hanging each-line;不兼容
+```
+
 - 如何保持固定比例
 padding-top 的百分比是相对于宽度的，所以可以用来做比例布局
 
