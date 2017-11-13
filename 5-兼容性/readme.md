@@ -8,9 +8,6 @@
 ```
 
 - 不能使用属性
-
-
-
 https://autoprefixer.github.io/
 
 
@@ -45,3 +42,19 @@ cursor: not-allowed 与 `pointer-events: none` 冲突 #6
 原因：因为border-radius本来就是设置border的属性的，当你定义了border的形状，颜色后，border-radius就对border生效，但是对内容（譬如内容的颜色等属性）的圆角范围就未定义，所以才超出边缘。
          后者这是先将border设置为0了，没有border的情况下，border-radius就对整个内容生效，对于边缘的颜色，我们可以利用box-shadow这个属性，设置其的扩展的属性为1，其他属性为0,则达到的效果和设置border是一样的。
         当然，如果你本来就只是想要圆角效果，不需要设置border，那可以直接设置border-radius属性即可。{:1_495:}
+        
+### 字体平滑
+结论：iOS上，修改 -webkit-font-smoothing 属性，结果是：
+```css
+-webkit-font-smoothing: none : 无抗锯齿
+-webkit-font-smoothing: antialiased | subpixel-antialiased | default : 灰度平滑
+```
+
+结论：MacOS上，修改 -webkit-font-smoothing 属性，结果是：
+```css
+-webkit-font-smoothing: none : 无抗锯齿
+-webkit-font-smoothing: subpixel-antialiased | default : 次像素平滑
+-webkit-font-smoothing: antialiased : 灰度平滑
+```
+
+[字体渲染抗锯齿CSS属性: -webkit-font-smoothing](https://stacktrace.tech/2017-02-10/webkit-font-smoothing/)

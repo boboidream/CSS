@@ -20,6 +20,9 @@ png8有1位的布尔透明通道（要么完全透明，要么完全不透明）
 2.尺寸小的，色彩不丰富的和背景透明的切成gif或者png8的；
 3.半透明的切成png24。 
 
+- 多倍图
+每个页面按照设计高保真分目录：@1x @2x @3x。
+
 ## image-rendering 解决图片缩放模糊
 当图片有缩放时，决定图片的渲染方式。
 ```css
@@ -42,6 +45,9 @@ div {
         -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
 ```
+
+### svg
+- [SVG 应用指南](https://svgontheweb.com/zh/)
 
 ### 参考资料
 - [image-rendering - MDN](https://developer.mozilla.org/en/docs/Web/CSS/image-rendering)
